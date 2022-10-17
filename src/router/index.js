@@ -3,19 +3,16 @@ import VueRouter from 'vue-router'
 /* import Home from '../views/Home.vue' */
 import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
-import Num from '../components/desafios_nivel_1/Num.vue'
-import Ncinco from '../components/Ncinco.vue'
-import Ndois from '../components/desafios_nivel_1/Ndois.vue'
-import Ntres from '../components/Ntres.vue'
-import Nquatro from '../components/Nquatro.vue'
+import atv1 from '../components/desafios_nivel_1/Atv-1.vue'
+import atv2 from '../components/desafios_nivel_1/Atv-2.vue'
 import Ranking from '../components/Ranking.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Login',
-    component: Login
+    name: 'Home',
+    component: Home
   },
   {
     path: '/about',
@@ -36,29 +33,14 @@ const routes = [
     component: Home
   },
   {
-    path: '/num',
-    name: 'Num',
-    component: Num
+    path: '/atv1',
+    name: 'atv1',
+    component: atv1
   },
   {
-    path: '/ndois',
-    name: 'Ndois',
-    component: Ndois
-  },
-  {
-    path: '/ntres',
-    name: 'Ntres',
-    component: Ntres
-  },
-  {
-    path: '/nquatro',
-    name: 'Nquatro',
-    component: Nquatro
-  },
-  {
-    path: '/ncinco',
-    name: 'Ncinco',
-    component: Ncinco
+    path: '/atv2',
+    name: 'atv2',
+    component: atv2
   },
   {
     path: '/ranking',

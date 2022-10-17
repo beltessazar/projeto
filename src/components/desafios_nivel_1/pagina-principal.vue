@@ -2,50 +2,37 @@
     <div>
         
         <div>
-            <h1>Video Explicativo</h1>
-            <Num v-show="showUm===true">Atividade Um </Num>
-            <Ndois v-show="showDois===true"></Ndois>
-            <Ntres v-show="showTres===true"></Ntres>
-            <b-button id="b-button" @click="mostrarAtv1()">Iniciar</b-button>
-            {{atv="Daniel"}}
-            
+            <atv1 v-if="atividade=='atv1'"></atv1>
+            <atv2 v-if="atividade=='atv2'"></atv2>
+            {{atividade}}
+            <b-button id="b-button" @click="proximaAtividade()" >Avançar</b-button>       
     </div>
     </div>
     </template>
     <script>
     
-    import Num from  "@/components/desafios_nivel_1/Num.vue";
-    import Ndois from  "@/components/desafios_nivel_1/Ndois.vue";
-    import Ntres from  "@/components/Ntres.vue";
+    import atv1 from  "@/components/desafios_nivel_1/Atv-1.vue";
+    import atv2 from  "@/components/desafios_nivel_1/Atv-2.vue";
+
 
     export default{
         name: 'Principal',
             components: {
-                Num,Ndois,Ntres
+      atv1,atv2
             },
             
             data(){
                 return{
-                    showUm : false,
-                    showDois : false,
-                    showTres : false,
+                    atividade : "",
+                    x : 1,
                 }
             },
             methods:{
                 
-                mostrarAtv1(){
-                    this.showUm = true;
-                },
-                mostrarAtv2(){
-                    
-                    this.showUm = false;
-                    this.showDois = true;
-                },
-                mostrarAtv3(){
-                    this.showUm = false;
-                    this.showDois = false;
-                    this.showTres = true;
-                },
+                proximaAtividade(){
+                    this.atividade = "atv"+this.x;
+                    this.x = this.x+1;
+                },                
             },          
    
     }

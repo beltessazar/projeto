@@ -9,16 +9,15 @@
     <h3>z = x</h3>
     <h3>Nestes exemplos a variavél 'x' guardao número '1', a variavél 'y' a palavra 'joão' e a variável 'z' o valor de 'x
     ' que no caso é '1'.</h3>
-    <b-button variant="outline-primary">Próximo ></b-button>
-      <Principal myName="Danielm">{{myName}}</Principal>
+    
 </div>
 </template>
 <script>
-import Principal from  "@/components/desafios_nivel_1/pagina-principal.vue";
+
 export default {
-    name: 'Num',  
+    name: 'atv1',  
     components: {
-   Principal
+
             }, 
 }
 </script>
